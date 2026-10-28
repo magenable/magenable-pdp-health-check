@@ -1,0 +1,44 @@
+:root {font-family:system-ui,sans-serif;color:#101c32;background:#f7f8fa;font-size:14px;line-height:1.5;color-scheme:light}
+* {box-sizing:border-box}
+body {margin:0;min-width:260px}
+header {background:#101c32;color:white;padding:16px;border-top:6px solid #ea6e46}
+.brand-title {display:flex;align-items:center;gap:12px}
+.logo-badge {display:block;flex:0 0 auto;padding:8px;background:white;border-radius:6px;line-height:0}
+.brand-logo {display:block;width:120px;height:auto;max-width:100%}
+.brand-title h1 {flex:1;min-width:0;font-size:1.4rem;line-height:1.25;margin:0}
+header>p {font-size:.9rem;line-height:1.4;margin:12px 0 0}
+#header-assurance {font-size:.85rem;color:#dbe3ef;margin-top:8px}
+h1 {font-size:1.65rem;margin:.4em 0}
+h2 {font-size:1.2rem}
+h3 {font-size:1rem}
+h1,h2,h3,summary {overflow-wrap:anywhere}
+main,footer {padding:16px}
+button {font:inherit;background:#101c32;color:white;border:2px solid #101c32;border-radius:6px;padding:9px 12px;margin:4px 4px 4px 0;cursor:pointer}
+.secondary {background:white;color:#101c32}
+button:disabled {opacity:.5;cursor:wait}
+button:focus-visible,a:focus-visible,summary:focus-visible {outline:3px solid #bd461e;outline-offset:3px}
+a {color:#983713}
+summary {cursor:pointer;font-weight:650;padding:9px 0}
+details {background:white;border:1px solid #c8ced8;border-radius:6px;padding:0 12px;margin:10px 0}
+details details {border-left:4px solid #9ca9bb}
+.status-guide {border-left:3px solid #ea6e46;margin:12px 0}
+.status-guide summary {font-size:.9rem;padding:8px 0}
+.status-guide p {font-size:.88rem;line-height:1.45;margin:0 0 10px;color:#26354d}
+.finding-fail {border-left-color:#a51c30}
+.finding-warning {border-left-color:#8b5b00}
+.finding-pass {border-left-color:#207044}
+.finding-not_evaluated {border-left-color:#687484}
+.muted {color:#4c586c;font-size:.9rem}
+p,li,pre,a {overflow-wrap:anywhere}
+pre {white-space:pre-wrap;font:inherit;background:#f1f3f6;padding:8px}
+.actions {display:flex;flex-wrap:wrap}
+footer {border-top:1px solid #c8ced8;font-size:.9rem}
+.footer-heading {font-weight:700;margin:0 0 8px}
+.footer-links {display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.footer-links a {max-width:100%}
+footer>p:last-child {font-size:.85rem;color:#4c586c}
+#status {padding:10px;background:#fff3ec;border-left:4px solid #ea6e46}
+#overall {font-size:1.5rem}
+ol {padding-left:22px}
+[hidden] {display:none!important}
+@media(max-width:359px) {.brand-logo {width:112px}.brand-title {gap:10px}.brand-title h1 {font-size:1.25rem}}

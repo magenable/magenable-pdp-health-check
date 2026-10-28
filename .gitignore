@@ -1,0 +1,15 @@
+node_modules/
+dist/
+artifacts/
+coverage/
+playwright-report/
+test-results/
+.agent-local/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.log
+__pycache__/
+.DS_Store

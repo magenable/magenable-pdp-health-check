@@ -1,0 +1,24 @@
+name: Bug report
+description: Report reproducible product-page diagnostic behavior
+body:
+  - type: markdown
+    attributes:
+      value: "Issues are public. Never post credentials, cookies, customer data, private URLs, personal addresses or unreviewed reports/screenshots. For sensitive matters email support@magenable.com.au."
+  - type: input
+    id: version
+    attributes:
+      label: Extension and Chrome versions
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+      description: Include safe reproduction steps and relevant variant/fulfilment context. Do not perform purchases or bypass verification screens.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Optional public, reviewed evidence
+      description: Public product URL with private/tracking parameters removed, plus a redacted report/screenshot if appropriate. Do not attach full profiles or HAR files.

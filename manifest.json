@@ -1,0 +1,10 @@
+{
+ "manifest_version":3,"name":"PDP Health Check by Magenable","version":"0.2.0",
+ "description":"Check product pages for SEO, structured data, AI discoverability readiness and conversion opportunities.",
+ "minimum_chrome_version":"116","incognito":"not_allowed","permissions":["activeTab","scripting","sidePanel","storage"],
+ "action":{"default_title":"Open PDP Health Check","default_icon":{"16":"icon-16.png","32":"icon-32.png"}},
+ "icons":{"16":"icon-16.png","32":"icon-32.png","48":"icon-48.png","128":"icon-128.png"},
+ "background":{"service_worker":"service-worker.js","type":"module"},
+ "side_panel":{"default_path":"sidepanel.html"},
+ "content_security_policy":{"extension_pages":"script-src 'self'; object-src 'none'; base-uri 'none'; connect-src 'none'"}
+}
