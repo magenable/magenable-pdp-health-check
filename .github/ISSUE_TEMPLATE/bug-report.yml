@@ -1,9 +1,9 @@
 name: Bug report
-description: Report reproducible product-page diagnostic behavior
+description: Report reproducible product-page diagnostic behaviour
 body:
   - type: markdown
     attributes:
-      value: "Issues are public. Never post credentials, cookies, customer data, private URLs, personal addresses or unreviewed reports/screenshots. For sensitive matters email support@magenable.com.au."
+      value: "Issues are public. Never post credentials, cookies, customer data, private URLs, personal addresses or unreviewed reports/screenshots. For sensitive security matters, read the [security policy](https://github.com/magenable/magenable-pdp-health-check/security/policy) before sharing details."
   - type: input
     id: version
     attributes:
@@ -13,12 +13,12 @@ body:
   - type: textarea
     id: behavior
     attributes:
-      label: Expected and actual behavior
-      description: Include safe reproduction steps and relevant variant/fulfilment context. Do not perform purchases or bypass verification screens.
+      label: Expected and actual behaviour
+      description: Include safe reproduction steps and relevant variant/fulfilment context. Do not make purchases or bypass verification screens.
     validations:
       required: true
   - type: textarea
     id: evidence
     attributes:
       label: Optional public, reviewed evidence
-      description: Public product URL with private/tracking parameters removed, plus a redacted report/screenshot if appropriate. Do not attach full profiles or HAR files.
+      description: Provide a public product URL with private/tracking parameters removed, plus a redacted report or screenshot if appropriate. Do not attach full browser profiles or HAR files.

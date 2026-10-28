@@ -1,17 +1,25 @@
 # Support
 
-Public issue tracker: https://github.com/magenable/magenable-pdp-health-check/issues
-Email: support@magenable.com.au. Email is available if you do not have/want a GitHub account. The extension itself needs no account.
+Use [GitHub Issues](https://github.com/magenable/magenable-pdp-health-check/issues) for product questions and bug reports. The extension needs no account; posting an issue requires a GitHub account.
 
-Before posting a public issue, review/redact all material. Never include passwords, API keys, tokens, cookies, browser profiles, HAR files, checkout/account links, customer data or personal addresses. A report may contain website content that automatic filters cannot classify perfectly.
+## Before you report a problem
 
-Useful bug report:
+Reanalyse after page or variant changes. After navigation or a tab switch, reactivate the extension using its toolbar icon. **Not Evaluated** is intentional when product identity, variant selection, currency or fulfilment context cannot be aligned. An unavailable overall score can indicate insufficient evidence rather than a crash.
+
+The extension reports visible website stock statements, not verified inventory. It does not bypass CAPTCHA, consent, login, purchase or checkout controls.
+
+## What to include
+
 - Extension version, Chrome version and operating system.
-- Expected behavior and what actually happened.
-- Optional publicly accessible product URL, without tracking/private query parameters.
-- Optional reviewed/redacted text/JSON report and screenshot showing the relevant product evidence independently.
-- Whether the product was fully loaded, variant selection/fulfilment context, and whether a security-verification screen appeared.
+- Expected and actual behaviour, with safe reproduction steps.
+- An optional public product URL with private or tracking parameters removed.
+- An optional reviewed and redacted text/JSON report and screenshot showing the relevant evidence.
+- Whether the page was fully loaded, a variant or fulfilment location was selected, or a security-verification screen appeared.
 
-Not Evaluated is deliberate when identity/variant/currency/fulfilment cannot be aligned; a missing overall score can reflect insufficient structured evidence rather than a crash. A website's “In stock” statement is not verified inventory. No CAPTCHA, consent, login, purchase or checkout bypass is performed. Reanalyse after page updates; re-activate the toolbar icon after navigation/tab changes.
+## Keep sensitive information private
 
-Security vulnerabilities should be reported privately by email as described in SECURITY.md, not posted publicly.
+GitHub Issues are public. Never post passwords, tokens, API keys, cookies, browser profiles, HAR files, checkout/account links, customer data or personal addresses. Automatic filters cannot classify all website content, so review every attachment before sharing it.
+
+For vulnerabilities or confidential security information, follow [SECURITY.md](SECURITY.md) instead of posting the details in a public issue.
+
+Read the [privacy policy](https://magenable.com.au/privacy-policy/) for information about local processing, retention and user-controlled exports.

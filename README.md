@@ -1,22 +1,33 @@
 # PDP Health Check by Magenable
 
-A local-first Chrome extension for on-demand ecommerce product-page diagnostics. Version0.2.0 is an experimental pilot, not a Chrome Web Store-approved release or a full SEO/performance/rich-result audit.
+A local-first Chrome extension for on-demand ecommerce product-page diagnostics.
+
+**Version 0.2.0 has been submitted to the Chrome Web Store. Its last verified review status is `PENDING_REVIEW`; submission does not mean approval or publication.** Until a Store release is confirmed, use the unpacked installation below.
 
 ## Features
-- Manual analysis in Chrome's native side panel; no registration/backend/API key.
--28 checks across metadata/SEO, Product and ProductGroup JSON-LD, a supported Product/Offer microdata subset, content readiness, conversion elements and local technical observations.
-- Evidence, recommendations, confidence, coverage and method labels. Best-effort DOM detection is not proof of feature absence; unaligned variant/price/stock comparisons remain Not Evaluated.
-- Separate visible delivery/pickup/store stock wording. This is the page's statement, not verified inventory.
-- Configurable deterministic scoring, session caching, copy summary and text/JSON exports.
-- No runtime AI, HTML upload, remote analytics, automatic crawling or blanket host access.
 
-## Install
-Until a Store listing is available, download [the runtime ZIP](releases/0.2.0/extension.zip), unzip it, then Chrome → chrome://extensions → Developer mode → Load unpacked. Choose the directory containing manifest.json.
+- Manual analysis in Chrome's native side panel, with no extension account, backend or API key required.
+- 28 checks covering page metadata and SEO, Product and ProductGroup JSON-LD, a supported Product/Offer microdata subset, content readiness, conversion elements and local technical observations.
+- Findings with supporting evidence, recommendations, confidence levels, evidence coverage and method labels.
+- Context-aware price and stock comparisons. Unresolved product, variant, currency or fulfilment alignment remains **Not Evaluated** rather than becoming a confirmed defect.
+- Separate visible delivery, pickup and store stock statements. These are website statements, not verified inventory.
+- Configurable, deterministic scoring, temporary report caching, summary copying and text/JSON exports.
+- No runtime AI, page-HTML uploads, remote analytics, automatic crawling or blanket website access.
 
-Open a normal HTTP(S) product page, click the toolbar icon, then Analyse This Page. Click the icon again after changing tabs/navigating. Explicitly reanalyse after page/variant changes. Read coverage and limitations, not just scores. A verification screen cannot be treated as a PDP.
+## Install and use
+
+Download [the version 0.2.0 runtime ZIP](https://github.com/magenable/magenable-pdp-health-check/blob/main/releases/0.2.0/extension.zip) and unzip it. In Chrome, open `chrome://extensions`, enable **Developer mode**, choose **Load unpacked**, and select the folder containing `manifest.json`.
+
+1. Open a normal HTTP(S) product page.
+2. Click the extension's toolbar icon, then **Analyse This Page**.
+3. Review the findings, confidence levels, coverage and limitations before acting on recommendations.
+4. Click the toolbar icon again after changing tabs or navigating. Explicitly reanalyse after changes to page content, prices or variants.
+
+Restricted pages and security-verification screens cannot be audited as product pages. The extension does not bypass login, CAPTCHA or checkout controls.
 
 ## Build and test
-Node24/npm11 and Python3.12 were used for this pilot. Chrome116 is the declared API/build floor, not a certified historical runtime; automated native-panel evidence is Chromium156.0.8078.4.
+
+The recorded pilot toolchain is Node.js 24, npm 11 and Python 3.12. Chrome 116 is the declared API/build floor, not a certified historical runtime. Automated native-panel tests use Chromium for Testing 156.0.8078.4.
 
 ```sh
 npm ci
@@ -29,22 +40,34 @@ npm run test:e2e
 npm run package
 ```
 
-Load dist/ unpacked. Generated artifacts, browser profiles and dependencies are not tracked. The included0.2.0 runtime ZIP has SHA256:
-`292c11da3e504920e327167decd53804ca8616a1f01d002fc531f51654a97881`
+Load `dist/` unpacked to test a source build. Dependencies, generated build output, browser profiles and test artifacts are not tracked.
 
-The pilot has170 unit/regression tests and8 native-browser scenarios, including manual permission grants, real report exports, uncertainty/stock scope, security and offline synthetic templates. These are not universal theme/platform/browser certification. No production websites or purchases are exercised by the default suite.
+The versioned runtime ZIP contains 10 runtime files. Its SHA-256 checksum is:
+
+```text
+292c11da3e504920e327167decd53804ca8616a1f01d002fc531f51654a97881
+```
+
+The recorded verification includes 170 unit/regression tests and 8 native-browser scenarios covering user-granted access, report exports, uncertainty, stock context, security and synthetic storefront templates. These results do not certify every theme, platform or browser version. The default suite does not visit production websites or make purchases.
 
 ## Privacy and support
-- [Privacy policy](PRIVACY.md)
-- [Support and reporting guidance](SUPPORT.md)
-- [Report a bug](https://github.com/magenable/magenable-pdp-health-check/issues)
-- Email: support@magenable.com.au (also available without a GitHub account)
-- Website: https://magenable.com.au/
-- [Security reporting](SECURITY.md)
 
-Never post credentials, cookies, private/customer URLs, account data or unreviewed screenshots/reports in public issues. Exported data should be reviewed/redacted before sharing.
+Read the [Magenable privacy policy](https://magenable.com.au/privacy-policy/) for local processing, storage and user-controlled sharing information. The website is the canonical policy source; this repository does not maintain a separate policy copy.
+
+For questions, bug reports and licensing enquiries, use [GitHub Issues](https://github.com/magenable/magenable-pdp-health-check/issues). See [support guidance](SUPPORT.md) for useful report details and [security reporting guidance](SECURITY.md) before reporting a vulnerability.
+
+The extension requires no account. Opening a GitHub issue requires a GitHub account. Issues are public: do not post credentials, cookies, customer information, private URLs, personal addresses or unreviewed reports/screenshots.
 
 ## Scope and limitations
-Metadata/schema checks form the core; rendered observations are best-effort and comparisons require independent aligned evidence. Parent-family recognition is not current-size selection. Hidden/inert templates, unusual controls, frames/shadow roots and unsupported structured formats may be missed. No full schema context/inheritance/RDFa/eligibility validation, mobile-layout simulation, PSI/Web Vitals or guaranteed inventory/search/AI-ranking/conversion improvement. Category and overall scores may be unavailable under evidence gates. No paid functions or accounts.
 
-This public repository is a clean source snapshot, not a mirror of private development history. No open-source licence has been selected or granted; public visibility is not an MIT/Apache licence. Magenable branding remains its owner's property. Contact support@magenable.com.au regarding reuse/licensing.
+Metadata and supported schema checks form the core. Rendered-page observations are best-effort, and comparisons require independently aligned evidence. Recognising a ProductGroup family does not establish the selected variant.
+
+Custom widgets, hidden or inert templates, inaccessible frames and shadow roots, and unsupported structured-data formats can limit coverage. This is not a full SEO, accessibility, mobile UX, performance, inventory or rich-result eligibility audit. It does not guarantee rankings, AI citations, conversion improvements or sales. Categories and the overall score may remain unavailable when evidence is insufficient.
+
+## About Magenable
+
+Magenable is an ecommerce and AI consultancy based in Melbourne, Australia. We help businesses improve their online stores through practical strategy, development and optimisation. [Explore Magenable's services](https://magenable.com.au/).
+
+## Repository and licensing
+
+This public repository is a clean source snapshot, not a mirror of private development history. No open-source licence has been selected or granted; public visibility does not grant an MIT or Apache licence. Magenable branding remains its owner's property. Raise reuse or licensing questions through GitHub Issues.

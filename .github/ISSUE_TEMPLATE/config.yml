@@ -1,5 +1,5 @@
 blank_issues_enabled: true
 contact_links:
-  - name: Magenable website contact
-    url: https://magenable.com.au/magenable-contact/
-    about: For private support, email support@magenable.com.au; do not post personal or security data in public issues.
+  - name: Security reporting guidance
+    url: https://github.com/magenable/magenable-pdp-health-check/security/policy
+    about: Read this guidance before reporting vulnerabilities or sharing sensitive information. Do not publish confidential details in an issue.

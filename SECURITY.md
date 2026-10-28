@@ -1,5 +1,9 @@
 # Security reporting
 
-Email support@magenable.com.au with subject “PDP Health Check security report”. Do not publish a vulnerability, exploit, credential, private report, customer information or browser-session data in a public issue.
+Do not publish vulnerability details, exploits, credentials, private reports or customer information in GitHub Issues.
 
-Describe affected version, impact and minimal safe reproduction. Do not send passwords, cookies, keys, full profiles or HAR files. No response-time/SLA, reward or bug-bounty promise is made. This pilot has automated security/permission checks, not an independent security audit.
+For a sensitive security report, use [Magenable's website contact form](https://magenable.com.au/magenable-contact/) to request a private reporting channel. Keep the initial message brief and do not attach secrets, browser profiles or HAR files. Private vulnerability reporting is not currently enabled for this repository.
+
+Once a suitable private channel is agreed, provide the affected version, potential impact and a minimal, safe reproduction. No response-time commitment, reward or bug-bounty programme is implied.
+
+For ordinary product questions and non-sensitive bugs, use [GitHub Issues](https://github.com/magenable/magenable-pdp-health-check/issues). The extension has automated security and permission checks, not an independent security audit.
